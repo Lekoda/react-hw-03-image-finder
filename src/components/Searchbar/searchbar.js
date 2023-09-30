@@ -9,9 +9,11 @@ export class SearchBar extends Component {
     e.preventDefault();
     this.props.onSubmit(this.state.query);
   };
+
   onInputChange = e => {
-    this.setState({ query: e.target.value });
+    this.setState({ query: e.currentTarget.value });
   };
+
   render() {
     return (
       <header>
